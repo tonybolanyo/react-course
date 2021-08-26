@@ -1,12 +1,13 @@
 import "./ExpenseItem.css"
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+
   return (
     <div className="expense-item">
-      <div>28 marzo 2021</div>
+      <div>{props.date.toLocaleDateString()}</div>
       <div className="expense-item__description">
-        <h2>Samsung Tablet</h2>
-        <div className="expense-item__price">203.25€</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">{props.amount}€</div>
       </div>
     </div>
   )
